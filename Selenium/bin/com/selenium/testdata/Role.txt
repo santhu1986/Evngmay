@@ -1,0 +1,4 @@
+RoleName###RoleType###Results
+ManagercitiMay###E
+GManagercitiMay###E
+AManagercitiMay###E
