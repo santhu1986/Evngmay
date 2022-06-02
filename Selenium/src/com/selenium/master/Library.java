@@ -6,17 +6,19 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class Library
 {
 
-	 Properties Pr;
- FileInputStream Fis;
-  WebDriver driver;
-String Expval,Actval;
+	public static Properties Pr;
+ public static FileInputStream Fis;
+ public static WebDriver driver;
+ public static String Expval,Actval;
 
 public String openApp(String Url) 
 {
+	System.setProperty("webdriver.gecko.driver","C:\\Users\\LENOVO\\Desktop\\geckodriver.exe");
 	String Expval="Ranford Bank";
 	driver=new FirefoxDriver();
 		driver.get(Url);
@@ -57,6 +59,29 @@ return "fail";
 }
 	}
 
+public void branch() throws InterruptedException
+{
+	  driver.findElement(By.xpath(".//*[@id='Table_01']/tbody/tr[2]/td/table/tbody/tr[2]/td/a/img")).click();
+	driver.findElement(By.xpath(".//*[@id='BtnNewBR']")).click();
+	driver.findElement(By.id("txtbName")).sendKeys("hfmhkmh");
+   
+	driver.findElement(By.id("txtAdd1")).sendKeys("lkhjhhj");
+    
+    driver.findElement(By.id("txtZip")).sendKeys("12345");
+
+	new Select(driver.findElement(By.id("lst_counrtyU"))).selectByVisibleText("INDIA");
+	
+	
+	new Select(driver.findElement(By.id("lst_stateI"))).selectByVisibleText("GOA");
+	new Select(driver.findElement(By.xpath(".//*[@id='lst_cityI']"))).selectByVisibleText("GOA");
+			Thread.sleep(3000);
+			driver.findElement(By.xpath(".//*[@id='btn_insert']")).click();
+			Thread.sleep(3000);
+	  		driver.switchTo().alert().accept();
+	  		Thread.sleep(3000);
+	  		driver.findElement(By.xpath(".//*[@id='Table_01']/tbody/tr/td[1]/a/img")).click();
+}
+
 public String Role(String RN,String RT)
 {
 	Expval="Sucessfully";
@@ -86,4 +111,18 @@ public String Role(String RN,String RT)
        }
  return Actval;     
 }
+
+
+public void admlgt()
+
+{
+	 driver.findElement(By.xpath(".//*[@id='Table_02']/tbody/tr/td[3]/a/img")).click();
+	 
+	 }
+
+public void Appc()
+{
+	 driver.close();
+}
+
 }

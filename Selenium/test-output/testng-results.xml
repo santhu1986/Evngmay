@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9163" started-at="2022-05-02T10:48:11 IST" finished-at="2022-05-02T10:48:20 IST">
+  <suite name="Default suite" duration-ms="44716" started-at="2022-05-18T18:55:34 IST" finished-at="2022-05-18T18:56:18 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9163" started-at="2022-05-02T10:48:11 IST" finished-at="2022-05-02T10:48:20 IST">
-      <class name="scripts.Sample">
-        <test-method status="PASS" signature="OpenApp()[pri:0, instance:scripts.Sample@4bbfb90a]" name="OpenApp" duration-ms="9080" started-at="2022-05-02T10:48:11 IST" finished-at="2022-05-02T10:48:20 IST">
+    <test name="Default test" duration-ms="44716" started-at="2022-05-18T18:55:34 IST" finished-at="2022-05-18T18:56:18 IST">
+      <class name="com.selenium.master.Exepom">
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.selenium.master.Exepom@76b0bfab]" name="Login" is-config="true" duration-ms="9262" started-at="2022-05-18T18:55:34 IST" finished-at="2022-05-18T18:55:43 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OpenApp -->
-      </class> <!-- scripts.Sample -->
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="Rolecre()[pri:0, instance:com.selenium.master.Exepom@76b0bfab]" name="Rolecre" duration-ms="35397" started-at="2022-05-18T18:55:43 IST" finished-at="2022-05-18T18:56:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Rolecre -->
+      </class> <!-- com.selenium.master.Exepom -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
